@@ -1,0 +1,76 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.example.retrofit"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    dexOptions {
+        jumboMode = true
+        preDexLibraries = false
+        javaMaxHeapSize "4g"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    flavorDimensions "string"
+
+/*    productFlavors {
+        mock {
+            applicationIdSuffix = ".mock"
+        }
+        prod {
+        }
+    }*/
+
+    // Remove mockRelease as it's not needed.
+/*    android.variantFilter { variant ->
+        if (variant.buildType.name.equals('release')
+                && variant.getFlavors().get(0).name.equals('mock')) {
+            variant.setIgnore(true)
+        }
+    }*/
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    //
+    implementation support_dependencies.appCompat
+    implementation support_dependencies.cardView
+    implementation support_dependencies.design
+    implementation support_dependencies.recyclerView
+    implementation support_dependencies.supportV4
+    implementation support_dependencies.supportV13
+    implementation support_dependencies.supportVectorDrawable
+    implementation support_dependencies.exifInterface
+    //
+    implementation glide
+    implementation gson
+    implementation okhttp3LoggingInterceptor
+    implementation gsonConverter
+    implementation retrofit2
+    implementation eventbus
+    implementation lottie
+    implementation(aboutlibraries) {
+        transitive = true
+    }
+}

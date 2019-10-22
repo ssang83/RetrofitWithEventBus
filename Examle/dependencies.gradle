@@ -1,0 +1,74 @@
+ext {
+    // Version
+    support_library = '28.+'
+    firebase_library = '12.+'
+    play_services_library = '12.+'
+    arch_version = "1.0.0"
+
+    // Support Libraries dependencies
+    com_android_support = 'com.android.support:'
+    support_dependencies = [
+            appCompat            : "${com_android_support}appcompat-v7:${support_library}",
+            annotations          : "${com_android_support}support-annotations:${support_library}",
+            cardView             : "${com_android_support}cardview-v7:${support_library}",
+            design               : "${com_android_support}design:${support_library}",
+            exifInterface        : "${com_android_support}exifinterface:${support_library}",
+            palette              : "${com_android_support}palette-v7:${support_library}",
+            recyclerView         : "${com_android_support}recyclerview-v7:${support_library}",
+            supportV13           : "${com_android_support}support-v13:${support_library}",
+            supportV4            : "${com_android_support}support-v4:${support_library}",
+            supportVectorDrawable: "${com_android_support}support-vector-drawable:${support_library}"
+    ]
+
+    // Firebase Libraries dependencies
+    com_google_firebase = 'com.google.firebase:firebase-'
+    firebase_dependencies = [
+            ads      : "${com_google_firebase}ads:${firebase_library}",
+            auth     : "${com_google_firebase}auth:${firebase_library}",
+            config   : "${com_google_firebase}config:${firebase_library}",
+            core     : "${com_google_firebase}core:${firebase_library}",
+            crash    : "${com_google_firebase}crash:${firebase_library}",
+            database : "${com_google_firebase}database:${firebase_library}",
+            invites  : "${com_google_firebase}invites:${firebase_library}",
+            messaging: "${com_google_firebase}messaging:${firebase_library}",
+            storage  : "${com_google_firebase}storage:${firebase_library}"
+    ]
+
+    // GMS  Play Libraries dependencies
+    com_google_android_gms = 'com.google.android.gms:play-services-'
+    play_services_dependencies = [
+            ads        : "${com_google_android_gms}ads:${play_services_library}",
+            analytics  : "${com_google_android_gms}analytics:${play_services_library}",
+            appindexing: "${com_google_android_gms}appindexing:${play_services_library}",
+            appinvite  : "${com_google_android_gms}appinvite:${play_services_library}",
+            auth       : "${com_google_android_gms}auth:${play_services_library}",
+            awareness  : "${com_google_android_gms}awareness:${play_services_library}",
+            base       : "${com_google_android_gms}base:${play_services_library}",
+            cast       : "${com_google_android_gms}cast:${play_services_library}",
+            drive      : "${com_google_android_gms}drive:${play_services_library}",
+            fitness    : "${com_google_android_gms}fitness:${play_services_library}",
+            games      : "${com_google_android_gms}games:${play_services_library}",
+            gcm        : "${com_google_android_gms}gcm:${play_services_library}",
+            identity   : "${com_google_android_gms}identity:${play_services_library}",
+            location   : "${com_google_android_gms}location:${play_services_library}",
+            maps       : "${com_google_android_gms}maps:${play_services_library}",
+            nearby     : "${com_google_android_gms}nearby:${play_services_library}",
+            panorama   : "${com_google_android_gms}panorama:${play_services_library}",
+            places     : "${com_google_android_gms}places:${play_services_library}",
+            plus       : "${com_google_android_gms}plus:${play_services_library}",
+            safetynet  : "${com_google_android_gms}safetynet:${play_services_library}",
+            vision     : "${com_google_android_gms}vision:${play_services_library}",
+            wallet     : "${com_google_android_gms}wallet:${play_services_library}",
+            wearable   : "${com_google_android_gms}wearable:${play_services_library}"
+    ]
+
+    // Other
+    glide = "com.github.bumptech.glide:glide:4.7.1"
+    gson = "com.google.code.gson:gson:2.8.5"
+    okhttp3LoggingInterceptor = "com.squareup.okhttp3:logging-interceptor:3.10.0"
+    gsonConverter = "com.squareup.retrofit2:converter-gson:2.4.0"
+    retrofit2 = "com.squareup.retrofit2:retrofit:2.4.0"
+    eventbus = "org.greenrobot:eventbus:3.1.1"
+    lottie = "com.airbnb.android:lottie:2.5.5"
+    aboutlibraries = "com.mikepenz:aboutlibraries:6.0.9@aar"
+}
